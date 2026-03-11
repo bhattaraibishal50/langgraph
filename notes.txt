@@ -1,0 +1,196 @@
+Langgraph
+* Foundations of agentic AI: 
+* Langgraph fundamentals, graph, node, edges, conditional , loopings
+* Adavnced Langgraph: Persitance, time travel. 
+* AI agents and multi agents
+* Agentic RAG applications
+* Producationzation will project, deploy
+
+###Generativbe AI vs Agentic AI: 
+what is gen AI >>> transformative technology.
+AI reference to a class of ai models that can xcreate new content - such as text, images, audio, code or video -> that resembles human created data. It feels like created human, 4 year successful product. 
+
+LLm based apps like ChatGPT, gemini, claude.
+Diffusion models for images,m dalle or midjourney ( based on text provide images)
+Code genration llms like codeLLama 
+TTS models like elevenLabs convert speech into description. 
+Video gen models like sora.
+
+Generative AI vs Traditional AI (deep learning models collectively)
+Traditional AI system data input and output cancer patient yes or no, data study and check patterns, understand the patterns and if you pattern understand the predict the output
+
+Generative AI if data provide input is about learning the distribution of data so taht it can generate a new sample from it.
+the best part of generae as human mimic
+
+Areas of Generative AI:
+* Creative and business wirting
+* Software development
+* Customer support
+* Education
+* Desigining
+
+Additional power of tools access:
+genrative
+RAB based
+Tool Augmented chatbot
+Agentic AI
+
+I want to hire a backend engineering
+* Generative AI generate content where as agentic AI is about solvign a goal, create goal from user query and plan and execute accordingly
+* genetaive AI is bulding block of agentic AI
+* Generative AI is reactive, agentic Ai is proactive (autonomous)
+
+###Agentic AI
+Type of AI is a type of AI that can take upo a task or goal from a user and then work toward completing it on its own, with minimal human guidance.
+It plans take actiions, adapts to changes, and seeks help only when necessary.
+
+Characteristics:
+* autonomous: 
+    -> Always autonmy refers to ai systems ability to make decisions and tke actions on its won to achieve a given goal, without needing step by step human instructions.
+    * prooactive, (executation, decision makings, tool usages)
+    * controlled autonpmy and is necessary: (permission scope, human checkpoints, override controls, guardail)
+* Goal Oriented: 
+    -> operates with a persiostent objective in mind and contuinuslyu direcrt its actions to achieve that objective, rather than just responding to isolated prompts.
+    * acts a a compass for atutonomy, goals can comwe withc ionstraints, goals are stored in core memory, goals can be altered.
+* Planning:
+    -> agents ability to break down a high level goal into a strctured sequence of actions or subgoals and decixce the best path to acheive the desired outcoime
+    step1: Generate mutiple candidate plans
+    step2: execute based on faster and efficency and tools are available, cost, and risk and aligment
+    step#: select the best plan with the help of huiman in loop or preprogamed policy.
+* Reasoning: 
+    -> congitive process through which an agentic ai system interprets information, draws conclusions and make decioncs  - both while planning ahead and whiule exexuting actions in realtime.
+    * reasonings during plannings: 
+        -> goal decompostiion - break dwown abstract goals into cincrete steps, tool selection- decice which toolsv will be needed for whiuch steps,  resource estiamation - estimate time, dependencies, risk.
+    * reasonings during executation: 
+        -> Decison making , hlt handling - leadning when to pause and ask for help, Error handling - interpreting tool/API failures and recovering
+* Adaptability: 
+    -> agents ability to modify its plans, startegies, or actions in response to unexpected conditions - all while staying aligned with goal.
+    * Failures, external feedback, changing goals. 
+* Context Awareness: 
+    -> to undersnt, retain, utilize relevant informatiion from the ongoing task, past interactions, user preferences and envrionement caues to make better deciosns througth multi-step process
+    1. type of context: 
+        -> original goal, rocess till now + interfaction hsiry, envrionement state, tool respsones, user sepeciffi preferences, policy or guardrails
+    2. context awrness is implemented thropugh memory
+    3. Short term memory: current session
+    4. Long term memory: 
+
+5 Components in all most agentic AI.
+* Brain : LLM 
+    * Goal interpreation - understand user instructuiion and bream them into objectives
+    * planning: breakdown
+    * reasons:  make deciosns
+    * tool selection: choose selection
+    * commuincate: generate NLP for human or other agents
+* Orchestrator: -> Executes the plans using langraph - project mangaer
+    * Task sequences: determines the order of actions
+    * conditinal routing: direct flow based on context
+    * retry logics: handles failes tool calls or reasonmging attempts with backoff
+    * Lopint & iteration: Repeats steps:
+    * Delegation: decides when to hand off work tools, LLM or human
+* Tools : like hands and legs
+    * External actions: performs api calls
+    * Knowledge based access: RAG based or search tool grounds responses
+* Memory:
+    * Short term memory
+    * Long term mermory: high level goals, past interactions, 
+    * State tracking: monitor oprocess 
+* Supervisor: HITL - human in the loop (agent + human)
+    * HLTL - agents checks with human before high rick actions
+    * Guardrails enforcements - block unsage or non compalint behaviour
+    * Edfge case escalation: Alerts human when uncertainty/ Conflict aries.
+
+
+Complex workflow:
+workflow are system where llms and tools are orchestrated thoryugh predefined code path, this developer created and will exectuate in same order.
+Agents: on the other hands, are system where llms dynamically direct own process and tool usages, maintaing control over how they accomplolish tasks. agents will create a dynaically if one time one flowchart and anopther another flow chart.
+
+Automated hiring software: challenges:
+1. Control flow complexity:  
+langchian: conditional branch, loops, jumps. (linear workflow changes is ok but langchain but langgraph)
+langgraph: entire workflow as a graph, each task to be represented as node, connect nodes with the help has edges, ande edges decides as control flow. 
+
+2. State handling:
+* we need to maintain we need to it and it will evolve lattter.  in langchain we need to manually add it in dictornary but in langgraph it is stateful, when we create a graph it create state object -> pydantic or typedictorinary. it is accessable and muatable.
+
+3. Event driven exectuation:
+* sequential exectuation or parallel execuation but not event driven in langchain , event driven execuation in langgraph is ok. (store same in memory or external database)
+
+4. Fault tolerance:
+* Recover after some failures in long running workflow its very imporatant. 
+* small fault: big fault ) recover in both fault is required. 
+langchain doesnot have fault tolerance. 
+Langgraph has fault tolerance.  in small fault retry, in big fault >> recvery concept which will recover from it. using check pointer and stateful.
+
+5. Human in the loop (HITL): 
+If we need any human decision making in some stage. 
+For long duration It will compute resource it is not desgned for long running workflow. 
+
+6. Nested workflow: 
+subgraphs nested workflow: it is used as a node in subgraph. 
+multiagents systems - complex problem. langgraph and subgraph. resuabilty 
+
+7. Observability:
+refers how you can monitor, debug and understand what yuour workflow is doing on runtime.
+langchian - langsmith purpose is to monitor llm application. if we integrate it then it will closely monitor, what prompt is send, what prompt is token, it doesnot glue code cannot monitor. 
+langgraph has tight integration, each state is what happen , what are done what happen. 
+
+
+Langgraph is orchestration framework that enables you to build stateful, multi-step and event-driven workflows wuing large language models. It ideal for desiging boith single-agent and mulit-agent agentic ai applicaitons. 
+think of langGraph as a flowchart engine for llms- you define the steps(nodes), hiow they are connected (edges) and the logic that governs the transitions, langgraph take care of ste mangagement, condioional branching, looping pausing.resuming and fault recovery - feature essential for building robust, production-grade ai systems.
+
+When to use what ?
+langchian when buing simple, linear workflows. like a priompt chain, summarizer or basis retrieval
+use langgraph when ur case is complex, non linear workfliow what need. 
+* conditional paths
+* loops
+* Huiman in the loops steps
+* multi agent conditional
+* async or even driven execuation
+
+3. Should we still langchioan ?
+Yes, langgraph is buit on the tiop of langchain  -it doesnt re[lace it. 
+you will still uise langchain components like: 
+* chatopenAI 
+* Prmopttemplate
+* retirvers
+* dcoument loaders
+* tools, etc. 
+Langgraph handles workflow orchestratioon, while langchian provides that building blocks for each step in that workflow.
+
+
+###Langgraph core concepts
+orcehstration framework for building inteligent, stateful and multisetp llm workflows. 
+It enables advances features like parallelism, loops, branching, memory and resumability - making it ideal for agfentic and produiction grade ai applications
+It models your logic as a graph of nodes (tasks) and edges(routing) instead of a linear chain.
+
+LLM workflows: series of task to to execute to get goal.
+1. llm workfliowa are srtep by steop proces suing which we can build complex llm applications
+2. Each steps in workflow performs a distinct task - such as prompting, reasoning, tool calling, memory access or decuision makuing
+3. Workflows can be linear, parallel, branched, or looped, allowing for cimplex behaviours like retries, multi agent commuioncation or tool augmented reasoning. 
+4. common workflows.
+
+prompt chaining: sequential chain llm 
+routing: conditional which to changes
+parallel: given task will be break down into multiple subtask  and execute 
+orchestator workers: parallelization will decide dynaically llm which llm wll be used. based on the input query will be varry
+ecvaluator optimizer: task will be given not be perfoectly executed ocnce, email draft 1st time eamil wont be there. geneator and eavlauter llm.
+
+
+Graphs, Nodes and Edges:
+state: shared memory that flows thorugh your workflow, - it holds all the data being passed between models
+reducers: state concept, how updates from the nodes are applied to the shared state. each key in the state can have ots own reducer, which detrermies whether new data replace, merges or add to the exiosting value
+
+Langgraph is inspried by google pragel. 
+how execuation model
+1. graph definiation: 
+state schema. node, edges
+2. compilaton: 
+you can compile() on the stegraph. to ensure where the graph strucute and preapre it for execuation
+3. invocation: 
+you run the graph with .invoke(inistal_state)
+langgraph sends the intial staes as messatge to thje entry mode(s)
+4. Super-steps begin:
+Execuation proceeds in rounds
+5. message Passing & node activation:
+6. hlting condition when no nodes are active. 
+

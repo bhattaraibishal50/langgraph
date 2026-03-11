@@ -1,0 +1,5 @@
+routing: conditional which to changes
+like if else in programming -> in each branching we need to go based on conditions
+
+1. non llm based -> maths -> 
+2. llm based workflow -> customer supporte related workflow -> 

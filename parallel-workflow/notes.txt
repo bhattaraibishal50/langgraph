@@ -1,0 +1,1 @@
+for parallel we need partial update and sequetial state or we can do only return partial state what is change is ok.
