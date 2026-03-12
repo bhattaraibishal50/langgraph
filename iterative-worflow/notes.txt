@@ -1,9 +1,0 @@
-realtime:
-[Linkedin/x/instagram]
-automated workflow: 
-
-topic: >> post generate >> platform
-how do we evaluate post generate should be quality post ?
-
-
-image.png check

@@ -1,0 +1,42 @@
+chatbot: 
+* chatting
+* RAG
+* Tools
+* UI
+* langsmith
+* (memory -> persisntance, HITL, Retry)
+
+Design is a workflow llm based: smilple workflow
+sequential workflow,  user message
+state is concern: 
+* messages: list[str]
+
+
+refers to the ability to save and restore the state of a workflow over time. 
+
+high level goal to sets of tasks and 
+1. concept of graph >> nodes and eges
+2. concept of state >> graph execute hunalie imporatant data requires and state can acess the values of the nodes and mutable.
+
+when we trigger the workflow, input begins from start and send to each nodes, state changes occurs in this process. 
+execuation is stoped the worflow, then the state get lossed. 
+But with persistance we can change this behaviour, we can save this into some place and we can  use this in future.
+
+START -> node1 -> node2 -> END
+In persistance we will store the value in each intermediate steps.
+
+1. Fault tolerance. 
+2. chat resume feature
+
+Checkpointers:
+persistance is done via - Checkpointers , all graph execuation to manage into checkpoints.
+supersteps -> parallel to be 1 -> checkpointer in each super steps. will save into db (persisnace)
+
+Threads:
+* thread_id against state value is saved.
+
+Benefits of persistance:
+* Short term memory: past conversation you want to resume.
+* Fault tolerance: if it crash into some stage then it will resume on the fault state. 
+* HITL: interupt and wait for human interaction to resume using persistance
+* Time travel: we can execute going back and then debug. 
