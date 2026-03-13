@@ -1,0 +1,18 @@
+Steaming
+models start sending tokens (words) as soon as they are generated, instead of waiting for the entire response to be ready before returning it
+
+why streaming
+1. Faster response time - low droff-off rates
+2. Minics human like conversation
+3. Important for multi modal UI
+4. better ux for long output such as code
+5. you can cancel midway saving tokens
+6. You can interleave UI update, eg: show thinking show tool resuklts
+
+chabotgraph provide steam functuion which is a geneator: 
+in python, geneator is a special type of iteartor that allows you to generate values on the fly, one at a time, using the yield keywoard instead of return
+
+threading:
+Converstation uniqueness
+
+Database: Sqllite3
