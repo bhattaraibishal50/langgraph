@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import uuid
 
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 
-from backend.langraph_rag_backend import (
+from backend.langraph_5_rag_backend import (
     chatbot,
     ingest_pdf,
     retrieve_all_threads,

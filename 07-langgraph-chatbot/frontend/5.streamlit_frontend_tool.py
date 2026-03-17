@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 import streamlit as st
-from backend.langgraph_tool_backend import chatbot, retrieve_all_threads
+from backend.langgraph_3_tool_backend import chatbot, retrieve_all_threads
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 import uuid
 

@@ -3,7 +3,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import streamlit as st
-from backend.langgraph_backend import chatbot
+from backend.langgraph_1_backend import chatbot
 from langchain_core.messages import HumanMessage
 
 # st.session_state -> dict -> 
