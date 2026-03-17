@@ -86,3 +86,40 @@ Langgraph
 * START -> Retiever -> reranker -> LLm answer -> end. 
 if a workflow branches (conftional/parelle/subgraph)_ Langsmithch captchers wich path was executed. 
 
+
+Observability -> Debugging -> Trace end to end observe -> single trace. 
+
+Monitoring and alerting -> If we want multiplee traces can be monitred based on various basis  such as token uasages, cost, error rates and success rates. 
+Alerting we are proactively alerted when permissiable limit then send alerted
+Evaluation: non deterministic in nature llm , if we change smaller change any smaller change can be signigicant output, we can brench match, evaluation providfes an objectivge, repeatable way to track performance over time,  ensuring tnew version actiually better and preventing regressions. 
+
+LLmops: specilised job roles.
+
+Prompt experiemental: 
+how do we define: 
+-> test based on the datasets. 
+Langsmith allows you to test and compare difrernt prompt everions. A/B tests accross prompts on the same datasets.
+
+Datasets creation and annotation: 
+* Publicy available datasets or own datasets.
+* Manual anotation
+* Stored datasets versioned and rreuse across project. 
+
+
+User feedback integration: 
+What it does: 
+* Let you capture thumbs up/down, ratings or structured feedback. 
+
+Collaboration: 
+* Team members can view, share and comment on traces, datasets and evaluations. 
+
+If we want we can also setup based on thread , we need to 
+https://docs.langchain.com/langsmith/threads
+WE need to mention any of this:
+session_id
+thread_id
+conversation_id
+
+we can replace with config meta data, then we can trace based on thread and can show clean UI
+
+

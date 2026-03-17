@@ -1,0 +1,18 @@
+3 tools implemented in current langgraph
+Search, calculator, getStockPrice
+github connect 
+
+brittle:
+chabtot -> github
+latter update api tool and api has update the github.
+10 api change 
+
+MCP -> seperation of concern (SOC) 
+tools -> server
+client -> chat 
+
+mcp ->> 
+MCP client  langgraph 
+MCP server -> fastMCP ( how to make servers)
+
+

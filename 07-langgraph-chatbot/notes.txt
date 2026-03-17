@@ -16,3 +16,8 @@ threading:
 Converstation uniqueness
 
 Database: Sqllite3
+
+In langgraph tool bode is a prebuilt node that acts as a bridge between your graph and external tools
+* A tool node is readymade node that know how to handle 
+toolConditions. -> question ko based ma tool garne ho ki k ganre ho 
+is a prebuild conditional edge function that helps your graph decide whould the llm goes or go to tools 

@@ -90,7 +90,7 @@ if user_input:
         "configurable": {"thread_id": st.session_state["thread_id"]},
         "metadata": {
             "thread_id": st.session_state["thread_id"]
-        },
+        }, #we need to add metadata to configure based on thread id, because in the tool node we are checking if the thread has document or not based on the thread id in metadata
         "run_name": "chat_turn",
     }
 
