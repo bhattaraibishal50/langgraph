@@ -7,7 +7,7 @@ import uuid
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 
-from backend.langraph_5_rag_backend import (
+from backend.langgraph_5_rag_backend import (
     chatbot,
     ingest_pdf,
     retrieve_all_threads,

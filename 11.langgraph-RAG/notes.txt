@@ -1,0 +1,12 @@
+Why RAG ??
+outdated knowledges
+Privacy
+Hallugination
+
+RAG principle incontext learning. aditional knowledges
+LLM based on paramteric knowledge which is based on learning mode3l.
+
+HOW ??
+retriever will convert into embeedings, which check into vectors to find the closest vectors.
+
+Ihnagentic ai and langgraph we will create a tool abnd this is a proper framework
