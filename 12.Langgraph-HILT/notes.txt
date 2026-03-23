@@ -1,0 +1,21 @@
+agentic ai: Autonomy
+In certain senario, we need use human to drive the agentic system. should i go ahead should i book yesto .
+
+HITL is desinged approach in AI system where a human actively participates at critical points of the AI workflow. - iether to supervise, approve correct or guide the model's output
+
+benefits:
+1. helps agentic as LLms are not perfect, misinterpret, ambiguity and halliguate,
+2. To add accountablity
+
+HLT ensures:
+* Accuracy improvement
+* Safety 
+* Ethical alignment
+* Better user experience.
+
+common HITL patterns:
+* action approcal pattern (approce or reject before execution)
+* output Review / Edit pattern
+* ambiguity calification pattern
+* Escalation pattern
+
