@@ -44,3 +44,42 @@ a. creation/update -> find out there is anuthing that has just happed rememberin
 b. Storage: -> need to store in some area. db in key valu8e,m log or vector database 
 3. retreival: -> find the current sistuation, what should i remember right now. if memory is required rthen we will search and memory stores and bing slective search
 4. Injection: -> is be the part of the stm -> context -> LLM the models sees it just the input token
+
+Key challanges faces:
+- memory create which things has to be converted as there are lot of noise in a conversation. 
+- Retriving the right memory at the right time. 
+- orchestraing the entire system.
+
+There are libs/manages  -> genai/agents memory layer
+LangMem 
+mem0
+supermemory
+
+Titan +. MIRAS 
+
+CHECK POINTER will help to perform the state and store
+
+
+context overflow problem: 
+Trimming: 
+-> 500 tokens max. threshold
+llm.invoke() will check all message total token count should be smaller than threshold max token, we need to do trimming, last n messages will keep and igfnore the old messages. 
+It will ignore delete other messages if token threshold exceed so that can be brkeaking conversation
+
+second technics is summarization
+recent wala n messages, we wont igonre old message instead send to another llm to generate the summary, and will send the combination of n messages, so context wont be erased. after summary we will delete the state. deletion is the prerequestis of the summarization
+
+
+Long term memory: 
+get the facts and relevant useful information for the user and store into db
+Before answer retirve from the user perferences, personalization helps.
+
+Langgraph => store base class -> base stores can create new memory, search , edt , delete.
+Basestore -> InMemoryStore -> Ram store, quickly protype not for production grade.
+BaseStore -> PostgresStore -> Store into production. langgraph-checkpoint-mysql for mysql
+RedisStore -> for RedisStore
+
+
+InMemoryStore
+
+Dedublication: llm user message, existing memory current message memory extract and ask get if the memory exist or not.

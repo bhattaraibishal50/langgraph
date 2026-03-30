@@ -26,3 +26,14 @@ Solve problems:
 1. Failure Isolation -> when one fails another wont be error, will work on other part.
 2. State seperation -> state defination each subgraph.
 3. Observability -> We can trace seperatively observer each subgraph.
+
+How do we implement subgraph into langgraph
+2 ways:
+1. invoke a graph from a node: 
+- inide a node in the parent graph inovke code the subgraph a node will. 
+- seperate state here.
+2. Add a subgraph as a node
+- shared state
+
+
+Usecase a user asked a question answer will be generated and it in english and want to make answer to nepali and send this answer to another llm and generate translation
