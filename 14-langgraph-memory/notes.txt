@@ -1,0 +1,46 @@
+LLM is paramatizewd math functions
+y = fθ(x)
+
+LLM is stateless so we are appneding in message veriable -> conversation buffers, in a way its looks like memory short term memory
+
+Short term memory implemented in chat
+conversation concept -> it doesnot exist outside a conversation thread. 1 conversation is 1 boundry.
+short term memory is thread scoped.
+
+short term memory is fragile -> code reset/server crash -> to solve this persistance usage, database.
+
+context window problem: 
+-> maxium number of token the llm can process, the problem is that llm can be longer
+
+Approach to solve: 
+* trimming: only send 50 messages and sumarrization..
+* hatayeko message lie the sumarized  problem. 
+
+Short term memory are thread scoped so can be problem in user personalized. in every new conversation 
+solution: 
+* special tyoe of memory
+Identify who the user is special , it has to be selective - long term memory
+
+Types of long term memory
+1. Eposidic memory - what happend - past events
+what it stores
+past events and experiences, usually tied to toem opr context
+
+2. Semantic memory -- what is true, facts
+Stoires, facts about the users facts, knowledge and stable information that are not tied to a single event.
+why it exists
+
+3. Procedural memory - how to dop things. 
+
+how does long term work ?
+4 steps: 
+a. creation/update -> find out there is anuthing that has just happed remembering boynd the conversation, user messages, model response, tool coutcvomes. 
+- extract memroy candidates
+- filter out noise
+- decides scope (user/agent/app)
+- decides whether to:
+    - Create a new memory
+    - update an existing one
+b. Storage: -> need to store in some area. db in key valu8e,m log or vector database 
+3. retreival: -> find the current sistuation, what should i remember right now. if memory is required rthen we will search and memory stores and bing slective search
+4. Injection: -> is be the part of the stm -> context -> LLM the models sees it just the input token
