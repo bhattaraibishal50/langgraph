@@ -1,0 +1,28 @@
+gen system can be very complex. 
+Tools calls, 
+RAG,
+Conditional routings
+Retries
+Memory
+HITL
+Evaluation 
+Guardrails
+
+Software development agents: 
+With subgraphs smaller units. 
+Team lead -> 1 agents
+BE, FE coding agents
+CodeReview -> Testing agents
+Code -> code review agents
+Devops -> devos
+
+Benefits:
+1. Modularity
+2. reusability
+3. Maintainability
+
+
+Solve problems: 
+1. Failure Isolation -> when one fails another wont be error, will work on other part.
+2. State seperation -> state defination each subgraph.
+3. Observability -> We can trace seperatively observer each subgraph.
